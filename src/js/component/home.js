@@ -1,25 +1,22 @@
 import React from "react";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
+import Lista from "./Lista.js";
 //create your first component
 export class Home extends React.Component {
+	constructor() {
+		super();
+	}
 	render() {
 		return (
-			<div className="text-center mt-5">
-				<h1>Hello Rigo!</h1>
-				<p>
-					<img src={rigoImage} />
-				</p>
-				<a href="#" className="btn btn-success">
-					If you see this green button... bootstrap is working
-				</a>
-				<p>
-					Made by{" "}
-					<a href="http://www.4geeksacademy.com">4Geeks Academy</a>,
-					with love!
-				</p>
+			<div className="container olakase">
+				<div className="col-sm4 offset-6">
+					<div className="row">
+						<p>Lista de canciones</p>
+					</div>
+					<div className="row">
+						<Lista />
+					</div>
+					<div className="row" />
+				</div>
 			</div>
 		);
 	}
